@@ -4,20 +4,22 @@
 // console log computer chose and player chose
 // console log winner 
 
-let numberChoice = Math.floor(Math.random() * 3)
+let computerChoice = Math.floor(Math.random() * 3)
 let humanScore = 0;
 let computerScore = 0;
 
 let getHumanChoice = function(){
-    let choice = prompt("enter your choice")
-    if(choice == "scissors"){
-        console.log(`player chose ${choice}`)
+
+    let humanChoice = prompt("enter your choice")
+
+    if(humanChoice == "scissors"){
+        console.log(`player chose ${humanChoice}`)
     }
-    else if (choice == "rock"){
-        console.log(`player chose ${choice}`)   
+    else if (humanChoice == "rock"){
+        console.log(`player chose ${humanChoice}`)   
     }
-    else if (choice == "paper"){
-        console.log(`player chose ${choice}`)   
+    else if (humanChoice == "paper"){
+        console.log(`player chose ${humanChoice}`)   
     }
     else{
         console.log("you can't use that")
@@ -26,33 +28,29 @@ let getHumanChoice = function(){
 
 let getComputerChoice = function(){
 
-    if(numberChoice == 0){
+    if(computerChoice == 0){
         console.log("computer chose rock")
     }
-    else if(numberChoice == 1){
+    else if(computerChoice == 1){
         console.log("computer chose paper")
     }
-    else if(numberChoice == 2){
+    else if(computerChoice == 2){
         console.log("computer chose scissors")
     }
 }
 
+ getHumanChoice()
+ getComputerChoice()
 
 
+function playRound() {
 
+    if (humanChoice == "scissors") {
+        console.log("hi");
+    }
 
-function playRound (humanChoice , computerChoice ){
-        
-     if(humanChoice == rock){
-        console.log("hello rock")
-     }
-       
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection)
 
 
 
