@@ -43,14 +43,42 @@ let getComputerChoice = function(){
 getHumanChoice()
 getComputerChoice()
 
+
  let playRound = function () {
 
-    if (humanChoice == "scissors" && computerChoice == 1) {
-        console.log("scissors vs paper");
+    if (humanChoice == "scissors" && computerChoice == 0) {
+        console.log("you lose!");
+        computerScore = + 1; 
+        humanScoreScore = + 0;
+        console.log(`computer: ${computerScore}`)
+        console.log(`player: ${humanScore}`)
     }
     else if (humanChoice == "scissors" && computerChoice == 1) {
-        console.log("scissors vs paper");
+        console.log("you win!");
     }
+    else if (humanChoice == "scissors" && computerChoice == 2) {
+        console.log("draw!");
+    }
+    else if (humanChoice == "rock" && computerChoice == 0) {
+        console.log("draw!");
+    }
+    else if (humanChoice == "rock" && computerChoice == 1) {
+        console.log("you lose!");
+    }
+    else if (humanChoice == "rock" && computerChoice == 2) {
+        console.log("you win!");
+    }
+    else if (humanChoice == "paper" && computerChoice == 0) {
+        console.log("you win!");
+    }
+    else if (humanChoice == "paper" && computerChoice == 1) {
+        console.log("draw!");
+    }
+    else if (humanChoice == "paper" && computerChoice == 2) {
+        console.log("you lose!");
+    }
+
+
    else{
     console.log("something went wrong")
    }
