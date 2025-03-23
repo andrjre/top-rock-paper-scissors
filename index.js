@@ -99,6 +99,9 @@ let getComputerChoice = function(){
 
 playRound()
 playRound()
+playRound()
+playRound()
+playRound()
 
 // find out a way to make scores carry over across rounds //
 // also find out how to use less if statements //
