@@ -4,10 +4,10 @@
 // console log computer chose and player chose
 // console log winner 
 
-let computerChoice = Math.floor(Math.random() * 3)
 let humanScore = 0;
 let computerScore = 0;
 let humanChoice;
+let computerChoice
 
 let getHumanChoice = function(){
 
@@ -29,6 +29,8 @@ let getHumanChoice = function(){
 
 let getComputerChoice = function(){
 
+     computerChoice = Math.floor(Math.random() * 3)
+
     if(computerChoice == 0){
         console.log("computer chose rock")
     }
@@ -40,24 +42,34 @@ let getComputerChoice = function(){
     }
 }
 
-getHumanChoice()
-getComputerChoice()
+
 
 
  let playRound = function () {
 
+    getHumanChoice()
+    getComputerChoice()
+
     if (humanChoice == "scissors" && computerChoice == 0) {
         console.log("you lose!");
-        computerScore = + 1; 
-        humanScoreScore = + 0;
+        computerScore = + 1;  
+        humanScore = + 0;
         console.log(`computer: ${computerScore}`)
         console.log(`player: ${humanScore}`)
     }
     else if (humanChoice == "scissors" && computerChoice == 1) {
         console.log("you win!");
+        computerScore = + 0; 
+        humanScore = + 1;
+        console.log(`computer: ${computerScore}`)
+        console.log(`player: ${humanScore}`)
     }
     else if (humanChoice == "scissors" && computerChoice == 2) {
         console.log("draw!");
+        computerScore = + 0; 
+        humanScore = + 0;
+        console.log(`computer: ${computerScore}`)
+        console.log(`player: ${humanScore}`)
     }
     else if (humanChoice == "rock" && computerChoice == 0) {
         console.log("draw!");
@@ -86,9 +98,8 @@ getComputerChoice()
 }
 
 playRound()
+playRound()
 
-
-// idek what this function is supposed to be //
-
-//step 5 // 
-//put this code in front of the ccomputer choice //
+// find out a way to make scores carry over across rounds //
+// also find out how to use less if statements //
+// and to add increments and decrements // 
