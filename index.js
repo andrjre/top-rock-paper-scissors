@@ -7,10 +7,11 @@
 let computerChoice = Math.floor(Math.random() * 3)
 let humanScore = 0;
 let computerScore = 0;
+let humanChoice;
 
 let getHumanChoice = function(){
 
-    let humanChoice = prompt("enter your choice")
+     humanChoice = prompt("enter your choice")
 
     if(humanChoice == "scissors"){
         console.log(`player chose ${humanChoice}`)
@@ -39,19 +40,24 @@ let getComputerChoice = function(){
     }
 }
 
- getHumanChoice()
- getComputerChoice()
+getHumanChoice()
+getComputerChoice()
 
+ let playRound = function () {
 
-function playRound() {
-
-    if (humanChoice == "scissors") {
-        console.log("hi");
+    if (humanChoice == "scissors" && computerChoice == 1) {
+        console.log("scissors vs paper");
     }
-
+    else if (humanChoice == "scissors" && computerChoice == 1) {
+        console.log("scissors vs paper");
+    }
+   else{
+    console.log("something went wrong")
+   }
+  
 }
 
-
+playRound()
 
 
 // idek what this function is supposed to be //
