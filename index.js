@@ -4,10 +4,11 @@
 // console log computer chose and player chose
 // console log winner 
 
-let humanScore = 0;
-let computerScore = 0;
+
 let humanChoice;
 let computerChoice
+let humanScore = 0;
+let computerScore = 0;
 
 let getHumanChoice = function(){
 
@@ -43,53 +44,79 @@ let getComputerChoice = function(){
 }
 
 
-
-
  let playRound = function () {
 
     getHumanChoice()
     getComputerChoice()
 
+    //scissors//
+
     if (humanChoice == "scissors" && computerChoice == 0) {
-        console.log("you lose!");
-        computerScore = + 1;  
-        humanScore = + 0;
+        console.log("LOSE!");
+        ++computerScore;  
+        humanScore;
         console.log(`computer: ${computerScore}`)
         console.log(`player: ${humanScore}`)
+        
     }
     else if (humanChoice == "scissors" && computerChoice == 1) {
-        console.log("you win!");
-        computerScore = + 0; 
-        humanScore = + 1;
+        console.log("WIN!");
+        computerScore; 
+        ++humanScore;
         console.log(`computer: ${computerScore}`)
         console.log(`player: ${humanScore}`)
     }
     else if (humanChoice == "scissors" && computerChoice == 2) {
-        console.log("draw!");
-        computerScore = + 0; 
-        humanScore = + 0;
+        console.log("DRAW!");
         console.log(`computer: ${computerScore}`)
         console.log(`player: ${humanScore}`)
     }
+
+    //rock//
+
     else if (humanChoice == "rock" && computerChoice == 0) {
-        console.log("draw!");
+        console.log("DRAW!");
+        console.log(`computer: ${computerScore}`)
+        console.log(`player: ${humanScore}`)
     }
     else if (humanChoice == "rock" && computerChoice == 1) {
-        console.log("you lose!");
+        console.log("LOSE!");
+        ++computerScore;  
+        humanScore;
+        console.log(`computer: ${computerScore}`)
+        console.log(`player: ${humanScore}`)
     }
     else if (humanChoice == "rock" && computerChoice == 2) {
-        console.log("you win!");
-    }
-    else if (humanChoice == "paper" && computerChoice == 0) {
-        console.log("you win!");
-    }
-    else if (humanChoice == "paper" && computerChoice == 1) {
-        console.log("draw!");
-    }
-    else if (humanChoice == "paper" && computerChoice == 2) {
-        console.log("you lose!");
+        console.log("WIN!");
+        computerScore; 
+        ++humanScore;
+        console.log(`computer: ${computerScore}`)
+        console.log(`player: ${humanScore}`)
     }
 
+    //paper//
+
+    else if (humanChoice == "paper" && computerChoice == 0) {
+        console.log("WIN!");
+        computerScore; 
+        ++humanScore;
+        console.log(`computer: ${computerScore}`)
+        console.log(`player: ${humanScore}`)
+    }
+    else if (humanChoice == "paper" && computerChoice == 1) {
+        console.log("DRAW!");
+        console.log(`computer: ${computerScore}`)
+        console.log(`player: ${humanScore}`)
+    }
+    else if (humanChoice == "paper" && computerChoice == 2) {
+        console.log("LOSE!");
+        ++computerScore;  
+        humanScore;
+        console.log(`computer: ${computerScore}`)
+        console.log(`player: ${humanScore}`)
+        }
+
+        //error//
 
    else{
     console.log("something went wrong")
@@ -97,12 +124,28 @@ let getComputerChoice = function(){
   
 }
 
-playRound()
-playRound()
-playRound()
-playRound()
-playRound()
+let playGame = function(){
+    playRound()
+    playRound()
+    playRound()
+    if(humanScore == computerScore){
+        playRound()
+        if(humanScore == computerScore){
+            playRound()
+        }
+    }
+    else if(humanScore > computerScore){
+        console.log("YOU WON THE GAME")
+    }
+    else if(humanScore < computerScore){
+        console.log("YOU LOST THE GAME")
+    }
 
-// find out a way to make scores carry over across rounds //
+}
+
+playGame()
+
+
+// if too many ties, game just ends for some reason, need to use a loop of sorts //
+// find out how to work tiebreaker // 
 // also find out how to use less if statements //
-// and to add increments and decrements // 
