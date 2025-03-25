@@ -12,7 +12,7 @@ let computerScore = 0;
 
 let getHumanChoice = function(){
 
-     humanChoice = prompt("enter your choice")
+     humanChoice = prompt("choose rock, paper or scissors").toLowerCase();
 
     if(humanChoice == "scissors"){
         console.log(`player chose ${humanChoice}`)
@@ -132,6 +132,18 @@ let playGame = function(){
         playRound()
         if(humanScore == computerScore){
             playRound()
+            if(humanScore == computerScore){
+                playRound()
+                if(humanScore == computerScore){
+                    playRound()
+                    if(humanScore == computerScore){
+                        playRound()
+                        if(humanScore == computerScore){
+                            playRound()
+                        }
+                    }
+                }
+            }
         }
     }
     else if(humanScore > computerScore){
